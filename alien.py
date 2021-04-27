@@ -1,6 +1,7 @@
 import pygame
 from pygame.sprite import Sprite
 
+
 class Alien(Sprite):
     """Class represents one alien enemy"""
 
@@ -10,15 +11,15 @@ class Alien(Sprite):
         self.screen = ai_game.screen
         self.settings = ai_game.settings
 
-        #load image and set rect
+        # load image and set rect
         self.image = pygame.image.load('images/alien.bmp')
         self.rect = self.image.get_rect()
 
-        #set enemy position
+        # set enemy position
         self.rect.x = self.rect.width
         self.rect.y = self.rect.height
 
-        #store exact enemy position
+        # store exact enemy position
         self.x = float(self.rect.x)
 
     def update(self):
